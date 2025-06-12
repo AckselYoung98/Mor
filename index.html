@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dia dos Namorados</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #1e1e1e;
+      overflow: hidden;
+      font-family: 'Arial', sans-serif;
+      color: white;
+    }
+
+    h1 {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 2em;
+      color: #ff5e7e;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+      z-index: 10;
+    }
+
+    .message {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+      padding: 20px;
+      z-index: 20;
+      background: rgba(30, 30, 30, 0.8); /* fundo escuro translúcido */
+      backdrop-filter: blur(4px);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid #ff5e7e;
+    }
+
+    .message p {
+      font-size: 1.2em;
+      margin: 10px 0;
+      line-height: 1.6;
+      color: #ffffff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+
+    .mesa {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .foto {
+      position: absolute;
+      width: 180px;
+      border: 5px solid white;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+      transform: rotate(var(--rot)) scale(var(--scale));
+      top: var(--top);
+      left: var(--left);
+      transition: all 0.3s ease;
+      cursor: grab;
+    }
+
+    .foto:hover {
+      z-index: 10;
+      transform: scale(1.2) rotate(0deg);
+    }
+
+    .coracoes {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .coracao {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: subir 6s linear infinite;
+    }
+
+    .coracao::before,
+    .coracao::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .coracao::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .coracao::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes subir {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Para a mulher mais forte e linda do mundo 💪❤️</h1>
+
+  <div class="mesa">
+    <!-- Fotos espalhadas -->
+    <img src="IMG_4565.PNG" class="foto" style="--rot: -8deg; --top: 10%; --left: 5%; --scale: 1;" />
+    <img src="IMG_5363.jpg" class="foto" style="--rot: 12deg; --top: 20%; --left: 60%; --scale: 1.1;" />
+    <img src="IMG_6776.jpg" class="foto" style="--rot: -15deg; --top: 50%; --left: 30%; --scale: 0.95;" />
+    <img src="1000034719.JPEG" class="foto" style="--rot: 5deg; --top: 70%; --left: 15%; --scale: 1;" />
+    <img src="IMG_5426.jpg" class="foto" style="--rot: -10deg; --top: 60%; --left: 65%; --scale: 1;" />
+    <img src="1000046574.JPEG" class="foto" style="--rot: 20deg; --top: 35%; --left: 75%; --scale: 0.9;" />
+    <img src="IMG_6777.jpg" class="foto" style="--rot: -5deg; --top: 15%; --left: 40%; --scale: 1;" />
+    <img src="1000005582.JPEG" class="foto" style="--rot: 8deg; --top: 80%; --left: 50%; --scale: 0.95;" />
+    <img src="IMG_3720.jpg" class="foto" style="--rot: -18deg; --top: 40%; --left: 10%; --scale: 1.1;" />
+
+    <!-- Corações subindo -->
+    <div class="coracoes">
+      <div class="coracao" style="left: 10%; animation-delay: 0s;"></div>
+      <div class="coracao" style="left: 20%; animation-delay: 2s;"></div>
+      <div class="coracao" style="left: 30%; animation-delay: 1s;"></div>
+      <div class="coracao" style="left: 50%; animation-delay: 3s;"></div>
+      <div class="coracao" style="left: 70%; animation-delay: 4s;"></div>
+      <div class="coracao" style="left: 85%; animation-delay: 1.5s;"></div>
+    </div>
+  </div>
+
+<div class="message">
+  <p>
+    Desde o nosso primeiro rolê rsrs encontro, começamos a viver uma história que só melhora. <br>
+    E sinceramente? Cada dia contigo é tipo plot de filme romântico com comédia no meio — e eu amo isso.
+  </p>
+  <p>
+    Você consegue o feito mágico de transformar até o toque do despertador às 3:30 da manhã em algo suportável. <br>
+    Porque mesmo com sono, frio e preguiça... lembrar que tenho você me dá aquele UP de "ok, vamos lá".
+  </p>
+  <p>
+    Obrigado por ser meu bom dia preferido, meu caos favorito e a paz que eu não sabia que precisava. <br>
+    Te amo mais que a nossa cama em dia de folga (e olha que isso é amor real) ❤️
+  </p>
+</div>
+</body>
+</html>
