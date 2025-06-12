@@ -141,6 +141,27 @@
         font-size: 1em;
         line-height: 1.4;
       }
+
+      /* Esconde o botão em celular */
+      #tocarMusica {
+        display: none;
+      }
+    }
+
+    /* Estilo do botão */
+    #tocarMusica {
+      position: fixed;
+      bottom: 50px;
+      right: 20px;
+      z-index: 999;
+      padding: 12px 18px;
+      background: #ff5e7e;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1em;
+      cursor: pointer;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
     }
   </style>
 </head>
@@ -184,26 +205,14 @@
       Te amo mais que a nossa cama em dia de folga (e olha que isso é amor real) ❤️
     </p>
   </div>
-  <audio id="musica" loop>
-  <source src="Zeze.mp3" type="audio/mpeg">
-  Seu navegador não suporta áudio.
-</audio>
 
-<button onclick="document.getElementById('musica').play()" style="
-  position: fixed;
-  bottom: 50px;
-  right: 20px;
-  z-index: 999;
-  padding: 12px 18px;
-  background: #ff5e7e;
-  color: white;
-  border: none;
-  border-radius: 30px;
-  font-size: 1em;
-  cursor: pointer;
-  box-shadow: 0 0 12px rgba(0,0,0,0.4);
-">
-  🎵 Tocar Música
-</button>
+  <audio id="musica" loop>
+    <source src="Zeze.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <button id="tocarMusica" onclick="document.getElementById('musica').play()">
+    🎵 Tocar Música
+  </button>
 </body>
 </html>
