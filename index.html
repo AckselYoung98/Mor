@@ -23,6 +23,8 @@
       color: #ff5e7e;
       text-shadow: 2px 2px 10px rgba(0,0,0,0.7);
       z-index: 10;
+      padding: 0 10px;
+      box-sizing: border-box;
     }
 
     .message {
@@ -32,10 +34,11 @@
       text-align: center;
       padding: 20px;
       z-index: 20;
-      background: rgba(30, 30, 30, 0.8); /* fundo escuro translúcido */
+      background: rgba(30, 30, 30, 0.8);
       backdrop-filter: blur(4px);
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
-  border-top: 1px solid #ff5e7e;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+      border-top: 1px solid #ff5e7e;
+      box-sizing: border-box;
     }
 
     .message p {
@@ -117,13 +120,35 @@
         opacity: 0;
       }
     }
+
+    /* Responsivo para celulares */
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.2em;
+        top: 10px;
+      }
+
+      .foto {
+        width: 100px;
+        border-width: 3px;
+      }
+
+      .message {
+        padding: 15px 10px;
+      }
+
+      .message p {
+        font-size: 1em;
+        line-height: 1.4;
+      }
+    }
   </style>
 </head>
 <body>
   <h1>Para a mulher mais forte e linda do mundo 💪❤️</h1>
 
   <div class="mesa">
-    <!-- Fotos espalhadas -->
+    <!-- Fotos -->
     <img src="IMG_4565.PNG" class="foto" style="--rot: -8deg; --top: 10%; --left: 5%; --scale: 1;" />
     <img src="IMG_5363.jpg" class="foto" style="--rot: 12deg; --top: 20%; --left: 60%; --scale: 1.1;" />
     <img src="IMG_6776.jpg" class="foto" style="--rot: -15deg; --top: 50%; --left: 30%; --scale: 0.95;" />
@@ -134,7 +159,7 @@
     <img src="1000005582.JPEG" class="foto" style="--rot: 8deg; --top: 80%; --left: 50%; --scale: 0.95;" />
     <img src="IMG_3720.jpg" class="foto" style="--rot: -18deg; --top: 40%; --left: 10%; --scale: 1.1;" />
 
-    <!-- Corações subindo -->
+    <!-- Corações -->
     <div class="coracoes">
       <div class="coracao" style="left: 10%; animation-delay: 0s;"></div>
       <div class="coracao" style="left: 20%; animation-delay: 2s;"></div>
@@ -145,19 +170,19 @@
     </div>
   </div>
 
-<div class="message">
-  <p>
-    Desde o nosso primeiro rolê rsrs encontro, começamos a viver uma história que só melhora. <br>
-    E sinceramente? Cada dia contigo é tipo plot de filme romântico com comédia no meio — e eu amo isso.
-  </p>
-  <p>
-    Você consegue o feito mágico de transformar até o toque do despertador às 3:30 da manhã em algo suportável. <br>
-    Porque mesmo com sono, frio e preguiça... lembrar que tenho você me dá aquele UP de "ok, vamos lá".
-  </p>
-  <p>
-    Obrigado por ser meu bom dia preferido, meu caos favorito e a paz que eu não sabia que precisava. <br>
-    Te amo mais que a nossa cama em dia de folga (e olha que isso é amor real) ❤️
-  </p>
-</div>
+  <div class="message">
+    <p>
+      Desde o nosso primeiro rolê rsrs encontro, começamos a viver uma história que só melhora. <br>
+      E sinceramente? Cada dia contigo é tipo plot de filme romântico com comédia no meio — e eu amo isso.
+    </p>
+    <p>
+      Você consegue o feito mágico de transformar até o toque do despertador às 3:30 da manhã em algo suportável. <br>
+      Porque mesmo com sono, frio e preguiça... lembrar que tenho você me dá aquele UP de "ok, vamos lá".
+    </p>
+    <p>
+      Obrigado por ser meu bom dia preferido, meu caos favorito e a paz que eu não sabia que precisava. <br>
+      Te amo mais que a nossa cama em dia de folga (e olha que isso é amor real) ❤️
+    </p>
+  </div>
 </body>
 </html>
